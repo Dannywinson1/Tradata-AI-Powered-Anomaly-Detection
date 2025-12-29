@@ -1,0 +1,46 @@
+/* Custom styles that extend Tailwind */
+@layer components {
+    .gradient-text {
+        @apply bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent;
+    }
+    
+    .hover-scale {
+        @apply transition-transform duration-300 hover:scale-105;
+    }
+    
+    .section-padding {
+        @apply py-20 px-4 md:px-8 lg:px-16;
+    }
+    
+    .shadow-soft {
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Delay animations for staggered effect */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
